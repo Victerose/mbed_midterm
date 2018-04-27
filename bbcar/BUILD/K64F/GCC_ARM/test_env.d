@@ -1,7 +1,7 @@
 BUILD/K64F/GCC_ARM/test_env.o: \
- /home/ell/ee2405/mbed_midterm/bbcar/mbed-os/features/unsupported/tests/mbed/env/test_env.cpp \
+ /home/ell/ee2405/midterm/bbcar/mbed-os/features/unsupported/tests/mbed/env/test_env.cpp \
  BUILD/K64F/GCC_ARM/mbed_config.h \
- /home/ell/ee2405/mbed_midterm/bbcar/mbed-os/features/unsupported/tests/mbed/env/test_env.h \
+ /home/ell/ee2405/midterm/bbcar/mbed-os/features/unsupported/tests/mbed/env/test_env.h \
  mbed-os/mbed.h mbed-os/rtos/rtos.h \
  mbed-os/rtos/TARGET_CORTEX/mbed_rtos_storage.h \
  mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.h \
