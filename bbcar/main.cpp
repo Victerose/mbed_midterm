@@ -19,15 +19,6 @@ PwmOut pin11(D11); // pin11 : right conti. servo
 // gun
 PwmOut pin12(D12);
 
-// decide whether see the ball
-int ball(float low, float high){
-    if (low < 200 && high > 250)
-        return 1;
-    else   
-        return 0;
-}
-
-
 int main() {
 
     pc.baud(9600);
