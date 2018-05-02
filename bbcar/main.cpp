@@ -20,13 +20,14 @@ PwmOut pin11(D11); // pin11 : right conti. servo
 PwmOut pin12(D12);
 
 int main() {
+    parallax_servo gun(pin12);
+    gun = 500;
 
     pc.baud(9600);
 
     servo_ticker.attach(&servo_control, .5);
 
-    parallax_servo gun(pin12);
-    gun = 500;
+
 
     parallax_servo left_servo(pin13);
     left_servo = 0;
@@ -48,12 +49,10 @@ int main() {
     while(1) {
         
         printf("Ping = %lf\r\n", (float)ping_low);
-        wait(0.2);
+        wait(0.15);
 
         if(ping_low < detect_area){ // see the target
-            left_servo = 0; right_servo = 0;
-            wait(1);
-            left_servo = -10; right_servo = -10;
+            left_servo = -2; right_servo = -2;
             wait(0.5);
             shotter1 = 0; shotter2 = 0;
             wait(1);
@@ -69,10 +68,11 @@ int main() {
             left_servo = 20; right_servo = 20;
         }
         printf("looping");
-        wait(0.2);
+        wait(0.1);
     }
 
     printf("finish all");
+    gun = 800;
     wait(1);
     return 0;
 

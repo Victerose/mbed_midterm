@@ -56,7 +56,8 @@ void RLED(){
     xbee.printf("%s", sent_word);
     wait(0.1);
     redLED = 1;
-    uLCD.printf("\nBang~~~~\n"); //Default Green on black text
+    uLCD.locate(0,2);
+    uLCD.printf("Bang~~~~"); //Default Green on black text
     wait(100);
 }
 
@@ -113,6 +114,13 @@ int main(){
 
     char buf[100] = {0};
 
+    uLCD.color(RED);
+    uLCD.locate(1,2);
+    uLCD.printf("\nAre u ready???\n"); //Default Green on black text
+    uLCD.text_width(4); //4X size text
+    uLCD.text_height(4);
+
+
     while(1){
         xbee.getc();
         while (i < 5){
@@ -128,9 +136,11 @@ int main(){
             while(count_down>0){
                 count_down--;
                 wait(1);
-                uLCD.printf("\n%d\n",count_down); //Default Green on black text
+                uLCD.locate(1,2);
+                uLCD.printf("%d",count_down); //Default Green on black text
             }
-            uLCD.printf("\nGGGGGGG\n"); //Default Green on black text
+            uLCD.locate(1,2);
+            uLCD.printf("GG~"); //Default Green on black text
         }
         
         redLED = 0;

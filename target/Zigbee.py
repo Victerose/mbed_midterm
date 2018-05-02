@@ -4,7 +4,7 @@ import tkinter as tk
 import threading
 
 # XBee setting
-serdev = '/dev/ttyUSB2'
+serdev = '/dev/ttyUSB0'
 s = serial.Serial(serdev, 9600)
 
 s.write("+++")
@@ -93,7 +93,7 @@ b = tk.Button(window, text='game start', width=15,
 b.pack()
 
 count_down = 60
-var.set(count_down)
+var.set("Are you ready?????")
 
 window.mainloop()
 
